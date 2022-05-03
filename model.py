@@ -5,6 +5,7 @@ class Stanje:
     def dodaj_kategorijo(self, kategorija):
         self.kategorije.append(kategorija)
 
+
 class Kategorija:
     def __init__(self, ime, opravila):
         self.ime = ime
