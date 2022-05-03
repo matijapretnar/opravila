@@ -20,6 +20,13 @@ class Kategorija:
                 neopravljena += 1
         return neopravljena
 
+    def stevilo_zamujenih(self):
+        zamujena = 0
+        for opravilo in self.opravila:
+            if not opravilo.zamuja:
+                zamujena += 1
+        return zamujena
+
     def dodaj_opravilo(self, opravilo):
         self.opravila.append(opravilo)
 
