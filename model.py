@@ -25,8 +25,8 @@ class Kategorija:
 
 
 class Opravilo:
-    def __init__(self, opis, rok=None, opravljeno=False):
-        self.opis = opis
+    def __init__(self, ime, rok=None, opravljeno=False):
+        self.ime = ime
         self.rok = rok
         self.opravljeno = opravljeno
 
