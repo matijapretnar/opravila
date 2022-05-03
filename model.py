@@ -5,6 +5,8 @@ class Stanje:
     def dodaj_kategorijo(self, kategorija):
         self.kategorije.append(kategorija)
 
+    def stevilo_kategorij(self):
+        return len(self.kategorije)
 
 class Kategorija:
     def __init__(self, ime, opravila):
