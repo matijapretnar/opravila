@@ -1,3 +1,5 @@
+from datetime import date
+
 class Stanje:
     def __init__(self, kategorije):
         self.kategorije = kategorije
@@ -32,9 +34,15 @@ class Kategorija:
 
 
 class Opravilo:
-    def __init__(self, ime, opravljeno=False):
+    def __init__(self, ime, rok=None, opravljeno=False):
         self.ime = ime
+        self.rok = rok
         self.opravljeno = opravljeno
+
 
     def opravi(self):
         self.opravljeno = True
+
+
+    def zamuja(self):
+        return not self.opravljeno and self.rok and self.rok < date.today()
